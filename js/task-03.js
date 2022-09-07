@@ -16,9 +16,13 @@ const galleryRef = document.querySelector('.gallery');
 const galleryList = images.map((item) => {
   const li = document.createElement('li');
   const img = document.createElement('img');
+  img.classList.add('photo');
+  img.style.width = '250px';
   img.setAttribute('src', item.url);
   img.setAttribute('alt', item.alt);
   li.append(img);
   return li;
 });
 galleryRef.append(...galleryList);
+galleryRef.style.display = 'flex';
+galleryRef.style.justifyContent = 'space-between';

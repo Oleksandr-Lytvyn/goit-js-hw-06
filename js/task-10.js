@@ -5,6 +5,7 @@ function getRandomHexColor() {
 const btnCreate = document.querySelector('[data-create]');
 const btnDestroy = document.querySelector('[data-destroy]');
 const divRef = document.querySelector('#boxes');
+const inputRef = document.querySelector('[type="number"]');
 
 btnCreate.addEventListener('click', createBoxes)
 btnDestroy.addEventListener('click', destroyBoxes)
@@ -21,5 +22,6 @@ divRef.insertAdjacentHTML("afterbegin", boxes);
 
 function destroyBoxes() {
 divRef.innerHTML = '';
+inputRef.value = '';
 
 }

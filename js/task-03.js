@@ -16,7 +16,8 @@ const galleryRef = document.querySelector('.gallery');
 
   const galleryList = images
   .map((img) => `<li class="item"><img class="img" src="${img.url}"alt="${img.alt}"width="300"></li>`)
-
-galleryRef.insertAdjacentHTML("beforeend", galleryList);
+const galleryListString = galleryList.join("")
+galleryRef.insertAdjacentHTML("beforeend", galleryListString);
 galleryRef.style.display = 'flex';
 galleryRef.style.justifyContent = 'space-between';
+
